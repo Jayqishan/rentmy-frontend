@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BACKEND_URL = "https://blog-backend-nu-indol.vercel.app";
+const BACKEND_URL = "https://rentmy-backend.vercel.app";
 
 const api = axios.create({
   baseURL: import.meta.env.DEV ? "/api" : `${BACKEND_URL}/api`
