@@ -1,0 +1,239 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.84);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(91, 143, 249, 0.12);
+}
+
+.inner {
+  max-width: 1240px;
+  height: 76px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-h);
+  font-size: 1.9rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.logoEmoji {
+  font-size: 1.35rem;
+}
+
+.accent {
+  color: var(--blue);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.link {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--text-300);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+  border: 1px solid transparent;
+}
+
+.link:hover,
+.active {
+  color: var(--text-100);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(91, 143, 249, 0.2);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cartBtn,
+.avatarLink,
+.userBtn,
+.burger {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartBtn,
+.userBtn,
+.burger {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-100);
+}
+
+.cartBtn {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.cartBtn:hover,
+.userBtn:hover,
+.burger:hover {
+  border-color: rgba(91, 143, 249, 0.32);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -3px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #bef264 0%, #22d3ee 100%);
+  color: #08120f;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #5b8ff9 0%, #8b5cf6 60%, #22d3ee 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  box-shadow: 0 10px 24px rgba(91, 143, 249, 0.25);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 190px;
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(17, 17, 17, 0.96);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
+}
+
+.menuHead {
+  padding: 8px 10px 12px;
+}
+
+.menuHead strong {
+  display: block;
+  font-size: 14px;
+}
+
+.menuHead span {
+  color: var(--text-500);
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.menuItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-300);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-100);
+}
+
+.menuLogout {
+  color: #fca5a5;
+}
+
+.burger {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: inline-flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 20px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(8, 8, 8, 0.95);
+  }
+
+  .mLink {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-100);
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .mLogout {
+    color: #fca5a5;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    height: 70px;
+    gap: 14px;
+  }
+
+  .logo {
+    font-size: 1.55rem;
+  }
+}

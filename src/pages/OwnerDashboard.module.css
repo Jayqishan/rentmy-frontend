@@ -1,0 +1,19 @@
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:28px; }
+.statCard { display:flex; align-items:center; gap:14px; padding:18px; }
+.statIco { width:44px; height:44px; border-radius:var(--r-md); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+.ico_blue   { background:rgba(91,143,249,.15); color:var(--blue); }
+.ico_green  { background:rgba(16,185,129,.15); color:var(--green); }
+.ico_yellow { background:rgba(245,158,11,.15); color:var(--yellow); }
+.ico_violet { background:rgba(139,92,246,.15); color:var(--violet); }
+.statLabel { font-size:12px; color:var(--text-500); margin-bottom:3px; }
+.statVal { font-family:var(--font-h); font-size:20px; font-weight:800; }
+.tableCard { overflow:hidden; }
+.tableHd { padding:18px 22px; border-bottom:1px solid var(--border); }
+.tableHd h3 { font-family:var(--font-h); font-size:17px; font-weight:700; }
+.itemCell { display:flex; align-items:center; gap:10px; min-width:180px; }
+.tImg { width:50px; height:40px; object-fit:cover; border-radius:var(--r-sm); flex-shrink:0; background:var(--bg-800); }
+.tName { font-weight:600; font-size:13px; color:var(--text-100); margin-bottom:2px; }
+.tDesc { font-size:11px; color:var(--text-500); }
+.daysBadge { padding:3px 9px; background:rgba(245,158,11,.12); color:var(--yellow); border-radius:10px; font-size:12px; font-weight:600; }
+@media(max-width:1024px){ .stats{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:480px){ .stats{ grid-template-columns:1fr; } }

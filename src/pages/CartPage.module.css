@@ -1,0 +1,21 @@
+.grid { display:grid; grid-template-columns:1fr 320px; gap:24px; align-items:start; }
+.list { display:flex; flex-direction:column; gap:14px; }
+.item { display:flex; align-items:center; gap:16px; padding:18px; }
+.thumb { width:96px; height:74px; object-fit:cover; border-radius:var(--r-sm); flex-shrink:0; background:var(--bg-800); }
+.info { flex:1; min-width:0; }
+.info h3 { font-family:var(--font-h); font-size:15px; font-weight:700; margin-bottom:6px; }
+.dates { font-size:12px; color:var(--text-500); margin-top:6px; }
+.deliv { font-size:11px; color:var(--green); margin-top:4px; }
+.right { display:flex; flex-direction:column; align-items:flex-end; gap:8px; flex-shrink:0; }
+.price { font-family:var(--font-h); font-size:18px; font-weight:700; color:var(--blue); }
+.sub { font-size:12px; color:var(--text-500); }
+.summary { padding:22px; position:sticky; top:80px; }
+.summary h3 { font-family:var(--font-h); font-size:17px; font-weight:700; margin-bottom:14px; }
+.sRow { display:flex; justify-content:space-between; font-size:13px; color:var(--text-300); margin-bottom:9px; }
+.sName { max-width:160px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sTotal { font-size:15px; }
+.sTotal strong:last-child { font-size:19px; }
+.checkoutBtn { width:100%; justify-content:center; padding:13px; margin-top:14px; }
+.contBtn { width:100%; justify-content:center; margin-top:8px; }
+@media(max-width:900px){ .grid{ grid-template-columns:1fr; } .summary{ position:static; } }
+@media(max-width:560px){ .item{ flex-wrap:wrap; } .thumb{ width:76px; height:60px; } }
